@@ -12,14 +12,11 @@ pipeline {
     stages {
         stage('Docker Network & SonarQube Start') {
             steps {
-                // Đảm bảo network tồn tại trước
                 bat 'docker network create fintrack-net || echo network exists'
 
-                // Nếu SonarQube nằm trong docker-compose.yml, khởi động trước
                 bat 'docker-compose up -d sonarqube'
 
-                // Chờ SonarQube sẵn sàng (tránh lỗi connect fail)
-                bat 'timeout /t 60 /nobreak >nul'
+                bat 'ping 127.0.0.1 -n 60 >nul'
             }
         }
 
