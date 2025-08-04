@@ -27,3 +27,4 @@ volumes:
 networks:
   fintrack-network:
     external: true
+    name: fintrack-net
