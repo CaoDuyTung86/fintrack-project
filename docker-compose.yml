@@ -49,6 +49,7 @@ services:
 
 networks:
   btl_fintrack-net:
+    external: true
 
 volumes:
   sonar-db-data:
