@@ -23,7 +23,7 @@ pipeline {
         stage('Code Analysis - SonarQube') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    bat 'mvn -f be-fintrack-master/pom.xml clean verify sonar:sonar -DskipTests -Dsonar.token=sqa_8a87f81f446888c386f12727582ecfbd9a3a56a2'
+                    bat 'mvn -f be-fintrack-master/pom.xml clean verify sonar:sonar -DskipTests -Dsonar.token=sqp_65ee9f6c992b85c7a2d9b008b75eafe23f7df37d'
                 }
             }
         }
