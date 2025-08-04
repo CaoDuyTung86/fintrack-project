@@ -45,7 +45,7 @@ services:
     volumes:
       - sonar-db-data:/var/lib/postgresql/data
     networks:
-      - fintrack-net
+      - btl_fintrack-net
 
 networks:
   fintrack-net:
