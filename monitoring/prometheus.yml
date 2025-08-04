@@ -12,10 +12,10 @@ scrape_configs:
 
   - job_name: 'jenkins'
     static_configs:
-      - targets: ['host.docker.internal:8080']
+      - targets: ['host.docker.internal:8888']
     metrics_path: '/prometheus'
 
   - job_name: 'springboot'
   metrics_path: '/actuator/prometheus'
   static_configs:
-    - targets: ['host.docker.internal:8081']
+    - targets: ['backend:5000']
