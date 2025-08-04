@@ -65,6 +65,7 @@ networks:
 
 volumes:
   sonar-db-data:
+  jenkins_data:
 
 
   
