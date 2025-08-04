@@ -58,10 +58,9 @@ services:
     networks:
       - btl_fintrack-net
 
-
-
 networks:
-  fintrack-net:
+  btl_fintrack-net:
+    driver: bridge
 
 volumes:
   sonar-db-data:
