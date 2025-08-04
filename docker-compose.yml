@@ -5,7 +5,7 @@ services:
     ports:
       - "5000:5000"
     networks:
-      - fintrack-net
+      - btl_fintrack-net
 
   frontend:
     build:
@@ -18,7 +18,7 @@ services:
     depends_on:
       - backend
     networks:
-      - fintrack-net
+      - btl_fintrack-net
 
   sonarqube:
     image: sonarqube:latest
@@ -26,7 +26,7 @@ services:
     ports:
       - "9000:9000"
     networks:
-      - fintrack-net
+      - btl_fintrack-net
     environment:
       - SONAR_JDBC_USERNAME=sonar
       - SONAR_JDBC_PASSWORD=sonar
@@ -48,7 +48,7 @@ services:
       - btl_fintrack-net
 
 networks:
-  fintrack-net:
+  btl_fintrack-net:
 
 volumes:
   sonar-db-data:
