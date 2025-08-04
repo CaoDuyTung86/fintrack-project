@@ -61,8 +61,7 @@ services:
 
 
 networks:
-    fintrack-net:
-    driver: bridge
+    fintrack-net: {}
 
 volumes:
   sonar-db-data:
