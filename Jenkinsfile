@@ -14,8 +14,6 @@ pipeline {
             steps {
                 bat 'docker network create fintrack-net || echo network exists'
 
-                bat 'docker-compose up -d sonarqube'
-
                 bat 'ping 127.0.0.1 -n 60 >nul'
             }
         }
