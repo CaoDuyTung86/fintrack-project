@@ -37,7 +37,6 @@ services:
 
   db:
     image: postgres:13
-    container_name: sonarqube-db
     environment:
       - POSTGRES_USER=sonar
       - POSTGRES_PASSWORD=sonar
