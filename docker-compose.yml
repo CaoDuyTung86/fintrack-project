@@ -45,17 +45,6 @@ services:
     networks:
       - fintrack-net
   
-  jenkins:
-    image: jenkins/jenkins:lts
-    container_name: jenkins
-    ports:
-      - "8888:8080"
-    volumes:
-      - jenkins_data:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - fintrack-net
-
 
 
 networks:
